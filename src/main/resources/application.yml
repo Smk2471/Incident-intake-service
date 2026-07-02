@@ -22,6 +22,24 @@ server:
   port: ${PORT:8080}
   forward-headers-strategy: framework
 
+springdoc:
+  api-docs:
+    enabled: true
+    path: /v3/api-docs
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui.html
+    try-it-out-enabled: true
+    operations-sorter: method
+    tags-sorter: alpha
+    display-request-duration: true
+
+    use-root-path: false
+    disable-swagger-default-url: true
+  show-actuator: true
+
+  use-management-port: false
+
 logging:
   pattern:
     console: "%d{yyyy-MM-dd'T'HH:mm:ss.SSSXXX} %-5level [correlationId=%X{correlationId}] %logger{36} - %msg%n"

@@ -185,13 +185,3 @@ curl -i $BASE_URL/incidents/00000000-0000-0000-0000-000000000000 \
 back, not regenerated), and the same value inside the JSON error body's
 `correlationId` field — confirms you can hand this ID to logs to find the
 exact request.
-
----
-
-## Quick checklist for your submission notes
-
-- [ ] All 12 above return the expected status code
-- [ ] `mvn test` passes locally
-- [ ] Swagger UI loads at `/swagger-ui.html` on the deployed Railway URL
-- [ ] Deployed URL responds (not just localhost) — test at least #1, #4,
-      #9 against the Railway URL before sending it in
